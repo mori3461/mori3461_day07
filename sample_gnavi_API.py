@@ -1,9 +1,10 @@
+import os
 from pprint import pprint
 
 import requests
 
 def main():
-    ACCESS_KEY = '11047f18c2c2b1e754a4b424e4b31771'
+    ACCESS_KEY = os.environ['ACCESS_KEY']
     freeword = 'wine'
     url = f'https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid={ACCESS_KEY}&freeword={freeword}'
     # GETリクエストを送っている
@@ -15,3 +16,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
